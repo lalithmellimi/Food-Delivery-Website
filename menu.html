@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">🍔 FoodExpress</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li>
+                <a href="cart.html">
+                    Cart 🛒 <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+<section class="menu-section">
+
+    <h1>Explore Our Menu</h1>
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for food..."
+            onkeyup="searchFood()"
+        >
+
+    </div>
+
+    <div class="filter-buttons">
+
+        <button onclick="filterFood('All')">All</button>
+        <button onclick="filterFood('Pizza')">Pizza</button>
+        <button onclick="filterFood('Burger')">Burger</button>
+        <button onclick="filterFood('Biryani')">Biryani</button>
+        <button onclick="filterFood('Dessert')">Dessert</button>
+        <button onclick="filterFood('Drinks')">Drinks</button>
+
+    </div>
+
+    <div class="food-container" id="foodContainer">
+
+        <div class="food-card" data-category="Pizza" data-name="Margherita Pizza">
+
+            <div class="food-image">🍕</div>
+
+            <div class="food-info">
+                <h3>Margherita Pizza</h3>
+                <p>Fresh cheese and tomato pizza.</p>
+                <h4>₹249</h4>
+
+                <button onclick="addToCart('Margherita Pizza', 249)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Pizza" data-name="Farmhouse Pizza">
+
+            <div class="food-image">🍕</div>
+
+            <div class="food-info">
+                <h3>Farmhouse Pizza</h3>
+                <p>Loaded with fresh vegetables.</p>
+                <h4>₹299</h4>
+
+                <button onclick="addToCart('Farmhouse Pizza', 299)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Burger" data-name="Cheese Burger">
+
+            <div class="food-image">🍔</div>
+
+            <div class="food-info">
+                <h3>Cheese Burger</h3>
+                <p>Juicy burger with melted cheese.</p>
+                <h4>₹179</h4>
+
+                <button onclick="addToCart('Cheese Burger', 179)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Burger" data-name="Chicken Burger">
+
+            <div class="food-image">🍔</div>
+
+            <div class="food-info">
+                <h3>Chicken Burger</h3>
+                <p>Crispy chicken burger.</p>
+                <h4>₹219</h4>
+
+                <button onclick="addToCart('Chicken Burger', 219)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Biryani" data-name="Chicken Biryani">
+
+            <div class="food-image">🍛</div>
+
+            <div class="food-info">
+                <h3>Chicken Biryani</h3>
+                <p>Authentic spicy chicken biryani.</p>
+                <h4>₹299</h4>
+
+                <button onclick="addToCart('Chicken Biryani', 299)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Biryani" data-name="Veg Biryani">
+
+            <div class="food-image">🍛</div>
+
+            <div class="food-info">
+                <h3>Veg Biryani</h3>
+                <p>Flavorful vegetable biryani.</p>
+                <h4>₹199</h4>
+
+                <button onclick="addToCart('Veg Biryani', 199)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Dessert" data-name="Chocolate Cake">
+
+            <div class="food-image">🍰</div>
+
+            <div class="food-info">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and delicious chocolate cake.</p>
+                <h4>₹149</h4>
+
+                <button onclick="addToCart('Chocolate Cake', 149)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <div class="food-card" data-category="Drinks" data-name="Cold Coffee">
+
+            <div class="food-image">🥤</div>
+
+            <div class="food-info">
+                <h3>Cold Coffee</h3>
+                <p>Refreshing chilled coffee.</p>
+                <h4>₹99</h4>
+
+                <button onclick="addToCart('Cold Coffee', 99)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 FoodExpress. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

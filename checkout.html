@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FoodExpress - Checkout</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍔 FoodExpress
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="cart.html">Cart 🛒</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="checkout-section">
+
+    <h1>Checkout</h1>
+
+    <form id="checkoutForm">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter phone number"
+            required
+        >
+
+        <label>Delivery Address</label>
+
+        <textarea
+            id="address"
+            placeholder="Enter your complete address"
+            required
+        ></textarea>
+
+        <label>Payment Method</label>
+
+        <select id="payment">
+
+            <option value="Cash on Delivery">
+                Cash on Delivery
+            </option>
+
+            <option value="UPI">
+                UPI
+            </option>
+
+            <option value="Card">
+                Credit / Debit Card
+            </option>
+
+        </select>
+
+        <button type="submit" class="checkout-btn">
+            Place Order
+        </button>
+
+    </form>
+
+    <div id="orderMessage"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 FoodExpress. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+document
+.getElementById("checkoutForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let orderId =
+        "FE" +
+        Math.floor(Math.random() * 100000);
+
+    let name =
+        document.getElementById("name").value;
+
+    let payment =
+        document.getElementById("payment").value;
+
+    document.getElementById("orderMessage").innerHTML = `
+
+        <div class="success-message">
+
+            <h2>🎉 Order Placed Successfully!</h2>
+
+            <p>Thank you, ${name}.</p>
+
+            <p>
+                Your Order ID is:
+                <strong>${orderId}</strong>
+            </p>
+
+            <p>
+                Payment Method:
+                ${payment}
+            </p>
+
+            <p>
+                Estimated Delivery:
+                25-35 minutes
+            </p>
+
+            <a href="index.html" class="btn">
+                Back to Home
+            </a>
+
+        </div>
+
+    `;
+
+    localStorage.removeItem("cart");
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Food Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">🍔 FoodExpress</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart 🛒 <span id="cartCount">0</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Delicious Food, Delivered Fast!</h1>
+        <p>Order your favorite meals from the best restaurants near you.</p>
+
+        <a href="menu.html" class="btn">Order Now</a>
+    </div>
+</section>
+
+<section class="categories">
+
+    <h2>Popular Categories</h2>
+
+    <div class="category-container">
+
+        <div class="category-card" onclick="openCategory('Pizza')">
+            <div class="category-icon">🍕</div>
+            <h3>Pizza</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Burger')">
+            <div class="category-icon">🍔</div>
+            <h3>Burgers</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Biryani')">
+            <div class="category-icon">🍛</div>
+            <h3>Biryani</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Dessert')">
+            <div class="category-icon">🍰</div>
+            <h3>Desserts</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Drinks')">
+            <div class="category-icon">🥤</div>
+            <h3>Drinks</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="restaurants">
+
+    <h2>Popular Restaurants</h2>
+
+    <div class="restaurant-container">
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍕</div>
+            <div class="restaurant-info">
+                <h3>Pizza Palace</h3>
+                <p>🍕 Italian • Fast Food</p>
+                <p>⭐ 4.5 | 🕒 25 mins</p>
+                <a href="menu.html" class="small-btn">View Menu</a>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍔</div>
+            <div class="restaurant-info">
+                <h3>Burger House</h3>
+                <p>🍔 Burgers • Fast Food</p>
+                <p>⭐ 4.3 | 🕒 20 mins</p>
+                <a href="menu.html" class="small-btn">View Menu</a>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍛</div>
+            <div class="restaurant-info">
+                <h3>Spice Kitchen</h3>
+                <p>🍛 Indian • Biryani</p>
+                <p>⭐ 4.7 | 🕒 30 mins</p>
+                <a href="menu.html" class="small-btn">View Menu</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="offer">
+    <h2>🎉 Special Offer</h2>
+    <p>Get 20% OFF on your first order!</p>
+    <a href="menu.html" class="btn">Explore Food</a>
+</section>
+
+<footer>
+    <p>© 2026 FoodExpress. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
